@@ -2,20 +2,18 @@ package com.modapi.main;
 
 import java.util.Arrays;
 
-import mods.common.library.Library;
-
 import com.modapi.main.Server.CommonProxy;
 import com.modapi.main.helper.LogHandler;
 
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "Mod-API", version="3.0",name="Mod API Base")
+//@Mod(modid = "Mod-API", version="3.0",name="Mod API Base")
 public class Mod_Api {
 	
 	@SidedProxy
@@ -38,7 +36,7 @@ public class Mod_Api {
 		meta.authorList = Arrays.asList("Roborave");
 		meta.name = "Mod-API";
 		meta.version = "3.0";
-		meta.description = "This the core for all my mods.\nLoaded mods:"+ CommonProxy.Mods.toString();
+		meta.description = "This the core for all my mods.\nLoaded mods:"/*+ CommonProxy.Mods.toString()*/;
 		
 	}
 	

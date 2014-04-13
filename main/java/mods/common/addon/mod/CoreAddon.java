@@ -14,7 +14,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "Core-Addon",version="0.4.1 Patch",name="Core Addon",dependencies="required-after:MainCore@[1.1.5.5,)")
+//@Mod(modid = "Core-Addon",version="0.4.1 Patch",name="Core Addon",dependencies="required-after:MainCore@[1.1.5.5,)")
 
 public class CoreAddon {
 

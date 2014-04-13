@@ -17,7 +17,7 @@ public class CommonProxy
 	
 	public void preInit()
 	{
-		findMods();
+		//findMods();
 	}
 
 	public void load() 

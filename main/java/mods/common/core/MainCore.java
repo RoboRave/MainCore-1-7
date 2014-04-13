@@ -23,14 +23,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-	@Mod(modid = Library.modid,name=Library.name,version= Library.versions)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4c16c63cc535f297b59057cd9f8818a38c10a2c3
-	
->>>>>>> 4c16c63cc535f297b59057cd9f8818a38c10a2c3
+	//@Mod(modid = Library.modid,name=Library.name,version= Library.versions)
 	public class MainCore extends DummyModContainer {
 		
 		  
@@ -49,8 +42,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		
 		public String actualMCVersion = Const.MCVERSION;
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		  public final String         allowUpdateCheckDesc          = "Set to true to allow checking for updates for ALL of my mods, false to disable";
 		    public boolean              allowUpdateCheck              = true;
 		    public final String         allowDebugOutputDesc          = "";
@@ -67,11 +59,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		    private final String        mcfTopic                      = "http://www.minecraftforum.net/topic/1114612-";
 		    
 		    public MCConfiguration      config;
-		    
-=======
->>>>>>> 4c16c63cc535f297b59057cd9f8818a38c10a2c3
-=======
->>>>>>> 4c16c63cc535f297b59057cd9f8818a38c10a2c3
+
 		public MainCore() 
 		{
 		
