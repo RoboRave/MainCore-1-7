@@ -1,12 +1,11 @@
 package com.modapi.main.Client;
 
-import com.modapi.main.api.Item.ItemBase;
-import com.modapi.main.api.Methods.AddItemsAPI;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
+import com.modapi.main.api.Methods.AddItemsAPI;
+
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ClientItem implements AddItemsAPI{
 	

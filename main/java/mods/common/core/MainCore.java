@@ -80,7 +80,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 			metadata.version = Library.versions;
 			metadata.description = "This the core for all my mods.";
 			
-			File file = new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + "MainCore" + File.separator + metadata.name+ ".dat");
+			File file = new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + "MainCore" + File.separator + metadata.name+ ".txt");
 			
 			config = new MCConfiguration(file);
 			syncConfig();
