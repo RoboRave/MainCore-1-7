@@ -1,13 +1,7 @@
 package mods.common.dedicated;
 
-import java.util.logging.Level;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.Session;
-import net.minecraftforge.common.MinecraftForge;
 import mods.common.core.MainCore;
 import mods.common.library.Library;
-import mods.common.logger.CoreLogger;
 import mods.common.server.CommonProxy;
 
 public class DedicatedServerProxy extends CommonProxy 

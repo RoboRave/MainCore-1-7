@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 import org.apache.logging.log4j.Level;
 
+import mods.common.addon.plugin.Loader;
+import mods.common.config.ConfigManager;
 import mods.common.config.MCConfiguration;
 import mods.common.dedicated.DedicatedServerProxy;
 import mods.common.library.Library;
@@ -23,13 +25,14 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-	//@Mod(modid = Library.modid,name=Library.name,version= Library.versions)
+	@Mod(modid = Library.modid,name=Library.name,version= Library.versions,guiFactory="mods.client.gui.GuiFactoryHandler")
 	public class MainCore extends DummyModContainer {
 		
 		  
 		
 		@Metadata(value = "MainCore")
 		public static ModMetadata   metadata;
+		
 		@Instance("MainCore")
 		public static MainCore instance;
 	
@@ -42,6 +45,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		
 		public String actualMCVersion = Const.MCVERSION;
 	
+		private String Plugin="PluginLoader";
+		public boolean plugin;
 
 		  public final String         allowUpdateCheckDesc          = "Set to true to allow checking for updates for ALL of my mods, false to disable";
 		    public boolean              allowUpdateCheck              = true;
@@ -75,11 +80,25 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 			metadata.version = Library.versions;
 			metadata.description = "This the core for all my mods.";
 			
-			File file = event.getSuggestedConfigurationFile();
+			File file = new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + "MainCore" + File.separator + metadata.name+ ".dat");
 			
 			config = new MCConfiguration(file);
+			syncConfig();
+			 ConfigManager.CreateConfig(event, "MainCore", metadata.name);
+				plugin = ConfigManager.get(ConfigManager.config.CATEGORY_GENERAL, Plugin, true, "PluginLoader").getBoolean(true);
+				ConfigManager.config.save();
+				
+				/**
+		         * for the new PluginLoader
+		         * TODO MAke Automatic
+		         */
+				if(plugin==true)
+				{
+					Loader.instance().loadPlugins();
+					Load.Mods();
+					Loader.instance().initializePlugins();
+				}
 	        
-	        syncConfig();
 		}
 		public void syncConfig()
 	    {
@@ -92,12 +111,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 	        generateUniqueNamesFile = config.getBoolean("generateUniqueNamesFile", ctgyGen, generateUniqueNamesFile, generateUniqueNamesFileDesc);
 	        
 	        config.save();
-	    }
+	        
+	       
+			
+	
+		}
 		@Mod.EventHandler
 		public void load(FMLInitializationEvent event)
 		{
 			CoreLogger.init();
-			Load.Mods();
 			DedicatedServerProxy.init();
 			
 			if (allowUpdateCheck)
