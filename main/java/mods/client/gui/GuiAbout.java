@@ -29,7 +29,8 @@ public class GuiAbout extends GuiScreen
     /**
      * Adds the buttons (and other controls) to the screen in question.
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void initGui()
     {
         this.buttonList.add(new GuiButton(6, this.width / 2 - 100, this.height - 38, I18n.format("gui.done")));

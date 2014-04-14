@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.Properties;
 
 import com.modapi.main.Client.ClientProxy;
-import com.modapi.main.Server.CommonProxy;
 
 /**
  * Simple mod localization class.

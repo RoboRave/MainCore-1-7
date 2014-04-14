@@ -65,10 +65,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		    
 		    public MCConfiguration      config;
 
+			private String description= "When true a new config screen will become useable.\n" 
+			+ "and you will be able to see loaded plugins in the new screen. Warning this is WIP feature";
+                    
+
 		public MainCore() 
 		{
 		
 		}
+		@SuppressWarnings("static-access")
 		@Mod.EventHandler
 		public void preInit(FMLPreInitializationEvent event) 
 		{
@@ -85,7 +90,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 			config = new MCConfiguration(file);
 			syncConfig();
 			 ConfigManager.CreateConfig(event, "MainCore", metadata.name);
-				plugin = ConfigManager.get(ConfigManager.config.CATEGORY_GENERAL, Plugin, true, "PluginLoader").getBoolean(true);
+				plugin = ConfigManager.get(ConfigManager.config.CATEGORY_GENERAL, Plugin, true, description).getBoolean(true);
 				ConfigManager.config.save();
 				
 				/**

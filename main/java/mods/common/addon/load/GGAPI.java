@@ -1,7 +1,5 @@
 package mods.common.addon.load;
 
-import java.lang.reflect.Method;
-
 public final class GGAPI
 {
   public static void addBlockIDToGrabList(int blockID)

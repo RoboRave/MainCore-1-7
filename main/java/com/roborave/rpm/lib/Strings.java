@@ -1,6 +1,5 @@
 package com.roborave.rpm.lib;
 
-@SuppressWarnings("hiding")
 public class Strings {
 
 	public java.lang.String version;
