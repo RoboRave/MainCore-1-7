@@ -4,11 +4,16 @@ import java.io.IOException;
 
 
 /**
- * Author: ShadowChild.
+ * Author: ShadowChild. adopted by RoboRave
  */
 public class ConfigurationException extends IOException {
 
-    public ConfigurationException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ConfigurationException() {
 
         super();
     }

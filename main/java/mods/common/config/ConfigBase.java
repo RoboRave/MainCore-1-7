@@ -12,7 +12,7 @@ public abstract class ConfigBase implements IObject {
 
     public ConfigBase(File file) {
 
-        config = new Configuration(file);
+        this.config = new Configuration(file);
     }
 
     @Override
@@ -20,7 +20,7 @@ public abstract class ConfigBase implements IObject {
 
         try {
 
-            config.load();
+            this.config.load();
 
             loadItems();
             loadBlocks();
@@ -30,7 +30,7 @@ public abstract class ConfigBase implements IObject {
             e.printStackTrace();
         } finally {
 
-            config.save();
+            this.config.save();
         }
     }
 

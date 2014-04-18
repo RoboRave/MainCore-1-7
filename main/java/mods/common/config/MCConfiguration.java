@@ -15,12 +15,12 @@ public class MCConfiguration extends Configuration
     public MCConfiguration(File file)
     {
         super(file);
-        fileRef = file;
+        this.fileRef = file;
     }
     
     public File getConfigFile()
     {
-        return fileRef;
+        return this.fileRef;
     }
     
     /**

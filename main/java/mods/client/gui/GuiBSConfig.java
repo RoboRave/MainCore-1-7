@@ -135,18 +135,12 @@ public class GuiBSConfig extends GuiScreen
      * Adds the buttons (and other controls) to the screen in question.
      */
     
-    @SuppressWarnings({ "static-access", "unchecked" })
+    @SuppressWarnings({ "static-access" })
     @Override
     public void initGui()
     {
         this.buttonList.clear();
         
-        /*
-         * this.buttonList.add(new GuiButton(1, this.width / 2 - 100,
-         * this.height - 38, I18n.format("gui.done")));
-         * this.buttonList.add(new GuiButton(2, this.width / 1 + 75, i + 72 +
-         * 12, "About"));
-         */
         this.about = new GuiButton(2, this.width / 2 - 100, this.height - 38, 98, 20, "About");
         this.Done = new GuiButton(1, this.width / 2 + 2, this.height - 38, 98, 20, I18n.format("gui.done", new Object[0]));
         

@@ -1,24 +1,36 @@
 package mods.common.addon.plugin;
 
+import mods.common.core.MainCore;
+import mods.common.logger.CoreLogger;
+
 /**
  * Handles detecting and loading Plugins.
+ * 
  * @author RoboRave
  */
 public class PluginLoader
-{
-    public static long i = 110;
+{   
     /**
-     * @author Zach
-     * @param e
+     * the Main way to add plugin to the PluginLoader
+     * 
+     * @author RoboRave
+     * 
+     * @param plugin the class of the plugin
      */
-    public static void addPlugin(Plugin e)
+	public static void addPlugin(Plugin plugin)
     {
-        e.preInit();
+
+        plugin.preInit();
+        if(MainCore.instance.dev==true)CoreLogger.info("Loaded Preinit for " + plugin.meta().name);
         
-        e.init();
+        plugin.init();
+        if(MainCore.instance.dev==true)CoreLogger.info("Loaded Init for " + plugin.meta().name);
         
-        e.postInit();
- 
-        Loader.instance().mods.add(e);
+        plugin.postInit();
+        if(MainCore.instance.dev==true)CoreLogger.info("Loaded Postinit for " + plugin.meta().name);
+        
+        Loader.instance().mods.add(plugin);
+        
+        Loader.instance().plugins.add(plugin.meta().name);
     }
 }

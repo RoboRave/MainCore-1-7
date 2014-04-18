@@ -29,8 +29,7 @@ public class GuiAbout extends GuiScreen
     /**
      * Adds the buttons (and other controls) to the screen in question.
      */
-    @SuppressWarnings("unchecked")
-	@Override
+    @Override
     public void initGui()
     {
         this.buttonList.add(new GuiButton(6, this.width / 2 - 100, this.height - 38, I18n.format("gui.done")));
@@ -70,8 +69,8 @@ public class GuiAbout extends GuiScreen
         this.drawCenteredString(this.fontRendererObj, "About", this.width / 2, 16, 0xFFFFFF);
         int offset = this.listWidth + 20;
         int shifty = 35;
-        shifty = drawLine("this is a new system for loading addons for Core-API and othe mods", offset, shifty);
-        shifty = drawLine("this was Created by RoboRave", offset, shifty);
+        shifty = drawLine("this is a new system for loading addons for MainCore and all of RoboRave's mods", offset, shifty);
+       // shifty = drawLine("this was Created by RoboRave", offset, shifty);
         GL11.glDisable(GL11.GL_BLEND);
         super.drawScreen(p_571_1_, p_571_2_, p_571_3_);
     }

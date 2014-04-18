@@ -1,12 +1,10 @@
 package mods.common.addon.plugin;
 
-import java.io.File;
-import java.util.List;
 
 /**
- * @author RoboRAve
+ * @author RoboRave
  * 
- **/
+ */
 
 public interface Plugin
 {
