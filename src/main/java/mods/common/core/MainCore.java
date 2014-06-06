@@ -203,8 +203,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 					Loader.instance().initializePlugins();
 				}
 				
-				if(this.dev==true&&CommonUtils.isObfuscatedEnv())
+				if(this.dev==true&&CommonUtils.isObfuscatedEnv()==false)
 				{
+					
+
 					DedicatedServerProxy.log("Loaded!!");
 					CombinedClientProxy.log("Loaded!!");
 					CommonProxy.log("Loaded!!");

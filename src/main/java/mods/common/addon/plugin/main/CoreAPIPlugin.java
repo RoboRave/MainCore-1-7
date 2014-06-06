@@ -26,7 +26,7 @@ public class CoreAPIPlugin implements Plugin
     public void preInit()
     {
     	DedicatedServerProxy.log("Test");
-        meta().description = "Main Core-API Part for my MainCore Mod";
+        
     }
     
     @Init()
@@ -46,7 +46,7 @@ public class CoreAPIPlugin implements Plugin
 	@Override
 	public String desc() 
 	{
-		return "Core-API Plugin for MainCore";
+		return  "Main Core-API Part for my MainCore Mod";
 	}
   
     

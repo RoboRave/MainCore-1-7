@@ -28,6 +28,10 @@ public class PluginMetadata
     {
         name = clazz.getAnnotation(Info.class).name();
         version = clazz.getAnnotation(Info.class).version();
+        try {
+        	description= clazz.newInstance().desc();
+		} catch (InstantiationException e) {e.printStackTrace();} catch (IllegalAccessException e) {e.printStackTrace();}
+        
     }
    
 }

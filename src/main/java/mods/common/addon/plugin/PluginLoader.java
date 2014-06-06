@@ -1,5 +1,7 @@
 package mods.common.addon.plugin;
 
+import mods.common.addon.plugin.common.Info;
+import mods.common.addon.plugin.common.Info.Init;
 import mods.common.core.MainCore;
 import mods.common.logger.CoreLogger;
 import mods.common.util.CommonUtils;
@@ -27,21 +29,21 @@ public class PluginLoader
 		//if(plugin.getClass().getAnnotation(PreInit.class) != null)
 		//{
 			plugin.newInstance().preInit();
-			if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv())	CoreLogger.info("Loaded Preinit for " + plugin.newInstance().meta().name);
+			if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv()==false) CoreLogger.info("Loaded Preinit for " + plugin.newInstance().meta().name);
 		//}
         
         
-        //if(plugin.getClass().isAnnotationPresent(Init.class)) 
+     //   if(plugin.getAnnotation(Info.Init.class))
 		//{
 			plugin.newInstance().init();
-        	if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv())	CoreLogger.info("Loaded Init for " + plugin.newInstance().meta().name);
+        	if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv()==false) CoreLogger.info("Loaded Init for " + plugin.newInstance().meta().name);
         //}
        
         
        // if(plugin.getClass().isAnnotationPresent(PostInit.class))
        // {
         	plugin.newInstance().postInit();
-        	if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv())CoreLogger.info("Loaded Postinit for " + plugin.newInstance().meta().name);
+        	if(MainCore.instance.dev==true&&CommonUtils.isObfuscatedEnv()==false) CoreLogger.info("Loaded Postinit for " + plugin.newInstance().meta().name);
        // }
                 
         Loader.instance().mods.add(plugin);

@@ -76,29 +76,23 @@ public class ConfigScreen extends GuiScreen
             try {
 				this.fontRendererObj.drawStringWithShadow(this.selectedMod.newInstance().meta().name, offset, shifty, 0xFFFFFF);
 			} catch (InstantiationException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			} catch (IllegalAccessException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
             shifty += 12;
             try {
 				shifty = drawLine(String.format("Version: %s (%s)", this.selectedMod.newInstance().meta().version, this.selectedMod.newInstance().meta().version), offset, shifty);
 			} catch (InstantiationException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
             try {
 				shifty = drawLine(String.format("Mod ID: '%s' ", this.selectedMod.newInstance().meta().name), offset, shifty);
 			} catch (InstantiationException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
             
@@ -106,12 +100,10 @@ public class ConfigScreen extends GuiScreen
             	if (rightSide > 20)
             	{
             		try {
-						this.getFontRenderer().drawSplitString(String.format("Descripton: '%s' ",this.selectedMod.newInstance().desc()), offset, shifty + 10, rightSide, 0xDDDDDD);
+						this.getFontRenderer().drawSplitString(String.format("Descripton: '%s' ",this.selectedMod.newInstance().meta().description), offset, shifty + 10, rightSide, 0xDDDDDD);
 					} catch (InstantiationException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IllegalAccessException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
             	}
@@ -120,10 +112,8 @@ public class ConfigScreen extends GuiScreen
             		try {
 						shifty = drawLine(String.format("Descripton: '%s' ", this.selectedMod.newInstance().desc()), offset, shifty + 10);
 					} catch (InstantiationException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IllegalAccessException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
             	}
