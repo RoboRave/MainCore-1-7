@@ -1,0 +1,22 @@
+*.class
+
+# Package Files #
+
+*.war
+*.ear
+.classpath
+.project
+# MC/Forge Directories #
+.gradle/
+.settings/
+build/
+eclipse/
+gradle/
+bin/
+src/main/java/com/
+src/main/java/duke605/
+run/
+
+# MC/Forge files #
+setup.bat
+build.bat

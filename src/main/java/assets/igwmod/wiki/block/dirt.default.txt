@@ -1,0 +1,9 @@
+
+[prefix{l}]Dirt Block [prefix{r}]
+Dirt is a basic block found abundantly in the Overworld. It is found at any altitude, and comprises the majority of the upper terrain layers in most overworld biomes. 
+Dirt can be thought of as a filler block, used during world generation to fill gaps between resources and features and provide shaping material for terrain, but it can also be collected and utilized for building. 
+Grass, snow, and mycelium can spread/collect over the top layer of Dirt blocks; mining these will drop ordinary Dirt blocks. Podzol cannot spread to dirt blocks, because it is a variant of the dirt block itself.
+When a dirt block is adjacent to a grass block and is exposed to a light level of at least 4 (e.g. from torches or sunlight), it will eventually be converted into a grass block at random intervals (see grass for growth details). 
+Mycelium spreads in similar fashion, but requires a light level of at least 9.
+A variant of dirt, grassless dirt, is featured in the Mega Taiga, Mesa and Savanna biome. 
+The only difference to regular dirt is that grass cannot spread to it. It can only be obtained with the /give command and has a data value of 1. Once the block is broken, it becomes normal dirt.
