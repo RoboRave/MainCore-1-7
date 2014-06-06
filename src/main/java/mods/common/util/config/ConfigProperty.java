@@ -34,7 +34,8 @@ public class ConfigProperty implements IConfigProperty
         this.isProperty = true;
     }
     
-    @Override
+    @SuppressWarnings("unused")
+	@Override
     public List<IConfigProperty> getConfigPropertiesList(boolean listCategoriesFirst)
     {
         if (!isProperty)

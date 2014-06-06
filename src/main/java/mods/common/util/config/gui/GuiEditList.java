@@ -25,7 +25,8 @@ public class GuiEditList extends GuiScreen
     private final String[]     beforeValues;
     private String[]           currentValues;
     private HoverChecker       tooltipHoverChecker;
-    private List               toolTip;
+    @SuppressWarnings("rawtypes")
+	private List               toolTip;
     protected boolean          enabled;
     
     public GuiEditList(GuiScreen parentScreen, IConfigProperty prop, int slotIndex, String[] currentValues, boolean enabled)

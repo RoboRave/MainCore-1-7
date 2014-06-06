@@ -36,7 +36,6 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 	/**
@@ -228,14 +227,14 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		public void syncConfig()
 	    {
 	        String ctgyGen = Configuration.CATEGORY_GENERAL;
-	        this.config.load();
+	        MainCore.config.load();
 	        
-	        this.allowUpdateCheck = this.config.getBoolean("allowUpdateCheck", ctgyGen, this.allowUpdateCheck, this.allowUpdateCheckDesc);
-	        this.allowDebugOutput = this.config.getBoolean("allowDebugOutput", ctgyGen, this.allowDebugOutput, this.allowDebugOutputDesc);
-	        this.updateTimeoutMilliseconds = this.config.getInt("updateTimeoutMilliseconds", ctgyGen, this.updateTimeoutMilliseconds, 100, 30000, this.updateTimeoutMillisecondsDesc);
-	        this.generateUniqueNamesFile = this.config.getBoolean("generateUniqueNamesFile", ctgyGen, this.generateUniqueNamesFile, this.generateUniqueNamesFileDesc);
+	        this.allowUpdateCheck = MainCore.config.getBoolean("allowUpdateCheck", ctgyGen, this.allowUpdateCheck, this.allowUpdateCheckDesc);
+	        this.allowDebugOutput = MainCore.config.getBoolean("allowDebugOutput", ctgyGen, this.allowDebugOutput, this.allowDebugOutputDesc);
+	        this.updateTimeoutMilliseconds = MainCore.config.getInt("updateTimeoutMilliseconds", ctgyGen, this.updateTimeoutMilliseconds, 100, 30000, this.updateTimeoutMillisecondsDesc);
+	        this.generateUniqueNamesFile = MainCore.config.getBoolean("generateUniqueNamesFile", ctgyGen, this.generateUniqueNamesFile, this.generateUniqueNamesFileDesc);
 	        
-	        this.config.save();
+	        MainCore.config.save();
 		}
 		/**
 		 * @param event main event loader

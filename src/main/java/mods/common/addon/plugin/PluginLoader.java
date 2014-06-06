@@ -1,7 +1,5 @@
 package mods.common.addon.plugin;
 
-import mods.common.addon.plugin.common.Info;
-import mods.common.addon.plugin.common.Info.Init;
 import mods.common.core.MainCore;
 import mods.common.logger.CoreLogger;
 import mods.common.util.CommonUtils;

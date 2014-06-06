@@ -13,7 +13,6 @@ package mods.common.addon.mod;
 import java.util.Arrays;
 
 import mods.common.addon.lib.LogHelper;
-import mods.common.addon.load.Addons;
 import mods.common.core.MainCore;
 
 import org.apache.logging.log4j.Level;

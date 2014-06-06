@@ -77,7 +77,8 @@ public class Menu extends GuiScreen
     /**
      * Adds the buttons (and other controls) to the screen in question.
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void initGui()
     {
         this.buttonList.clear();

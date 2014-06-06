@@ -172,7 +172,8 @@ public class GuiConfig extends GuiScreen
     /**
      * Adds the buttons (and other controls) to the screen in question.
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void initGui()
     {
         if (this.propertyList == null || this.needsRefresh)
@@ -300,7 +301,8 @@ public class GuiConfig extends GuiScreen
             this.drawToolTip(Arrays.asList(new String[] { I18n.format("bspkrs.configgui.applyGlobally.tooltip") }), mouseX, mouseY);
     }
     
-    public void drawToolTip(List stringList, int x, int y)
+    @SuppressWarnings("rawtypes")
+	public void drawToolTip(List stringList, int x, int y)
     {
     	this.drawHoveringText(stringList, x, y, fontRendererObj);
     }

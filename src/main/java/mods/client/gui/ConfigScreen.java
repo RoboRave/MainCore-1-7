@@ -165,7 +165,7 @@ public class ConfigScreen extends GuiScreen
      * Adds the buttons (and other controls) to the screen in question.
      */
     
-    @SuppressWarnings({ "static-access" })
+    @SuppressWarnings({ "static-access", "unchecked" })
     @Override
     public void initGui()
     {

@@ -5,7 +5,6 @@ import mods.common.addon.plugin.PluginLoader;
 import mods.common.addon.plugin.main.CoreAPIPlugin;
 import mods.common.addon.plugin.main.ModLoaderPlugin;
 import mods.common.addon.plugin.main.RPMPlugin;
-import mods.common.logger.CoreLogger;
 import cpw.mods.fml.common.Loader;
 
 

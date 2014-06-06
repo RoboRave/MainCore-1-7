@@ -1,7 +1,5 @@
 package mods.common.addon.load;
 
-import org.apache.logging.log4j.Level;
-
 import mods.common.addon.lib.LogHelper;
 import mods.common.addon.plugin.Plugin;
 import mods.common.addon.plugin.PluginMetadata;

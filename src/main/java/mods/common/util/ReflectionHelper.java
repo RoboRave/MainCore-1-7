@@ -5,7 +5,8 @@ import java.util.List;
 
 public class ReflectionHelper
 {
-    public static List getListObject(Class clazz, String srgFieldName, String mcpFieldName, Object instance)
+    @SuppressWarnings("rawtypes")
+	public static List getListObject(Class clazz, String srgFieldName, String mcpFieldName, Object instance)
     {
         try
         {
@@ -25,7 +26,7 @@ public class ReflectionHelper
         }
     }
     
-    public static void setBooleanValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, boolean newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
+    public static void setBooleanValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, boolean newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
     {
         Field privateField;
         if (CommonUtils.isObfuscatedEnv())
@@ -37,7 +38,7 @@ public class ReflectionHelper
         privateField.setBoolean(instance, newValue);
     }
     
-    public static boolean getBooleanValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, boolean defaultValue)
+    public static boolean getBooleanValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, boolean defaultValue)
     {
         try
         {
@@ -57,7 +58,7 @@ public class ReflectionHelper
         }
     }
     
-    public static void setIntValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, int newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
+    public static void setIntValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, int newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
     {
         Field privateField;
         if (CommonUtils.isObfuscatedEnv())
@@ -69,7 +70,7 @@ public class ReflectionHelper
         privateField.setInt(instance, newValue);
     }
     
-    public static int getIntValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, int defaultValue)
+    public static int getIntValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, int defaultValue)
     {
         try
         {
@@ -89,7 +90,7 @@ public class ReflectionHelper
         }
     }
     
-    public static void setFloatValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, float newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
+    public static void setFloatValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, float newValue) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
     {
         Field privateField;
         if (CommonUtils.isObfuscatedEnv())
@@ -101,7 +102,7 @@ public class ReflectionHelper
         privateField.setFloat(instance, newValue);
     }
     
-    public static float getFloatValue(Class clazz, String srgFieldName, String mcpFieldName, Object instance, float defaultValue)
+    public static float getFloatValue(@SuppressWarnings("rawtypes") Class clazz, String srgFieldName, String mcpFieldName, Object instance, float defaultValue)
     {
         try
         {

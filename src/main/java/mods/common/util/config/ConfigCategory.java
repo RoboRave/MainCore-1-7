@@ -32,7 +32,8 @@ public class ConfigCategory implements Map<String, Property>
     private String                               languagekey;
     private ArrayList<ConfigCategory>            children         = new ArrayList<ConfigCategory>();
     private Map<String, Property>                properties       = new TreeMap<String, Property>();
-    private int                                  propNumber       = 0;
+    @SuppressWarnings("unused")
+	private int                                  propNumber       = 0;
     public final ConfigCategory                  parent;
     private boolean                              changed          = false;
     private boolean                              isHotLoadable    = false;

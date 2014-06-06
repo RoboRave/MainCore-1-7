@@ -1,11 +1,10 @@
 package mods.common.api;
 import java.util.HashMap;
 
-import org.apache.logging.log4j.Level;
-
-import mods.common.addon.lib.LogHelper;
 import mods.common.implement.IObject;
 import mods.common.logger.CoreLogger;
+
+import org.apache.logging.log4j.Level;
 
 public class RegistryManager
 {

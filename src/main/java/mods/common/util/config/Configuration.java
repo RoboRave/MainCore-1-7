@@ -1361,7 +1361,8 @@ public class Configuration
     public static class UnicodeInputStreamReader extends Reader
     {
         private final InputStreamReader input;
-        private final String            defaultEnc;
+        @SuppressWarnings("unused")
+		private final String            defaultEnc;
         
         public UnicodeInputStreamReader(InputStream source, String encoding) throws IOException
         {

@@ -2,30 +2,15 @@ package mods.client.gui.ingame;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.world.World;
 
 public class ContainerResearch extends Container
 {
-    /**
-     * The crafting matrix inventory (3x3).
-     */
-    private World worldObj;
-    private int posX;
-    private int posY;
-    private int posZ;
-    private static final String __OBFID = "CL_00001744";
-
     public ContainerResearch(InventoryPlayer par1InventoryPlayer, World par2World, int par3, int par4, int par5)
     {
-        this.worldObj = par2World;
-        this.posX = par3;
-        this.posY = par4;
-        this.posZ = par5;
         this.addSlotToContainer(new Slot(par1InventoryPlayer, 0, 124, 35));
         int l;
         int i1;
