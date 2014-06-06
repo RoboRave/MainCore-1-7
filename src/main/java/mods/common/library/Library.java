@@ -22,7 +22,7 @@ public class Library {
 	    //This number is incremented every time a interface changes or new major feature is added, and reset every Minecraft version
 	    public static final int revisionVersion = 7;
 	    //This number is incremented every time I builds the mod, and never reset.
-	    public static final int buildVersion    = 127;
+	    public static final int buildVersion    = 130;
 
 	    public static int getMajorVersion()
 	    {
