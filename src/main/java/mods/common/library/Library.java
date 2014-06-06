@@ -5,8 +5,9 @@ import net.minecraft.world.World;
 
 public class Library {
 
-	public final static String name="MainCore";
+	public final static String name="ROBO-Core";
 	public static final String modid="MainCore";
+	
 	public static Configuration config = null;
 	
 	public static boolean isClient(World world) {
@@ -19,9 +20,9 @@ public class Library {
 	    //This number is incremented every minecraft release, never reset
 	    public static final int minorVersion    = 1;
 	    //This number is incremented every time a interface changes or new major feature is added, and reset every Minecraft version
-	    public static final int revisionVersion = 6;
+	    public static final int revisionVersion = 7;
 	    //This number is incremented every time I builds the mod, and never reset.
-	    public static final int buildVersion    = 124;
+	    public static final int buildVersion    = 127;
 
 	    public static int getMajorVersion()
 	    {

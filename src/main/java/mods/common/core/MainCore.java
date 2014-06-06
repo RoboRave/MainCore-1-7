@@ -43,7 +43,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 	 * @author Zach
 	 *
 	 */
-	@Mod(modid = Library.modid,name=Library.name,version= Library.versions,guiFactory="mods.client.gui.GuiFactoryHandler")
+	@Mod(modid = Library.modid,name=Library.name,version= Library.version,guiFactory="mods.client.gui.GuiFactoryHandler")
 	public class MainCore extends DummyModContainer {
 		
 		  
