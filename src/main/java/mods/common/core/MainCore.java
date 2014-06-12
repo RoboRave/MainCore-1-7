@@ -26,6 +26,7 @@ import mods.common.util.CommonUtils;
 import mods.common.util.Const;
 import mods.common.util.ModVersionChecker;
 import mods.common.util.config.Configuration;
+import net.minecraft.client.Minecraft;
 
 import org.apache.logging.log4j.Level;
 
@@ -43,7 +44,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 	 *
 	 */
 	@Mod(modid = Library.modid,name=Library.name,version= Library.version,guiFactory="mods.client.gui.GuiFactoryHandler")
-	public class MainCore extends DummyModContainer {
+	public class MainCore implements com.mumfrey.liteloader.LiteMod {
 		
 		  
 		
@@ -137,6 +138,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 																	+"It may print random info in the console,"
 																	+ "which could make loading minecraft slower."+"\n"
 																	+" Enable at your own risk";
+
+			private Configuration cs;
 			
                     
 
@@ -254,12 +257,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		}
 	
 		@Override
-		public String getModId() 
-		{
-			return Library.modid;
-		}
-	
-		@Override
 		public String getName() 
 		{
 			return Library.name;
@@ -309,6 +306,18 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		    {
 		        console((new Double(d)).toString());
 		    }
+			@Override
+			public void init(File configPath) {
+				configPath= new File(Minecraft.getMinecraft().mcDataDir.getAbsoluteFile()+"config"+File.separator+"test/");
+				this.cs= new Configuration(configPath);
+				cs.load();
+				cs.save();
+				
+			}
+			@Override
+			public void upgradeSettings(String version, File configPath,
+					File oldConfigPath) {
+			}
 	
 		
 	
