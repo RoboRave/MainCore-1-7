@@ -44,7 +44,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 	 *
 	 */
 	@Mod(modid = Library.modid,name=Library.name,version= Library.version,guiFactory="mods.client.gui.GuiFactoryHandler")
-	public class MainCore implements com.mumfrey.liteloader.LiteMod {
+	public class MainCore {
 		
 		  
 		
@@ -256,13 +256,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 			
 		}
 	
-		@Override
 		public String getName() 
 		{
 			return Library.name;
 		}
 	
-		@Override
 		public String getVersion() 
 		{
 			return Library.version;
@@ -306,18 +304,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 		    {
 		        console((new Double(d)).toString());
 		    }
-			@Override
-			public void init(File configPath) {
-				configPath= new File(Minecraft.getMinecraft().mcDataDir.getAbsoluteFile()+"config"+File.separator+"test/");
-				this.cs= new Configuration(configPath);
-				cs.load();
-				cs.save();
-				
-			}
-			@Override
-			public void upgradeSettings(String version, File configPath,
-					File oldConfigPath) {
-			}
 	
 		
 	
